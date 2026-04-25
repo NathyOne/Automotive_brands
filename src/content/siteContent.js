@@ -2,6 +2,15 @@ import classicDriverHero from "../assets/optimized/classic-driver-hero.webp";
 import classicDriverLogoCard from "../assets/optimized/classic-driver-logo.webp";
 import encorCurtainRaiser from "../assets/optimized/encor-curtain-raiser.webp";
 import encorElevatingEssence from "../assets/optimized/encor-elevating-essence.webp";
+import encorGalleryBlack from "../assets/optimized/encor-gallery-black.webp";
+import encorGalleryDash from "../assets/optimized/encor-gallery-dash.webp";
+import encorGalleryEleven from "../assets/optimized/encor-gallery-eleven.webp";
+import encorGalleryEngine from "../assets/optimized/encor-gallery-engine.webp";
+import encorGalleryGreen from "../assets/optimized/encor-gallery-green.webp";
+import encorGalleryRearFull from "../assets/optimized/encor-gallery-rear-full.webp";
+import encorGalleryRearLight from "../assets/optimized/encor-gallery-rear-light.webp";
+import encorGallerySideflat from "../assets/optimized/encor-gallery-sideflat.webp";
+import encorGallerySilver from "../assets/optimized/encor-gallery-silver.webp";
 import encorHero from "../assets/optimized/encor-hero.webp";
 import encorLogo from "../assets/optimized/encor-logo.webp";
 import encorProductHero from "../assets/optimized/encor-product-hero.webp";
@@ -13,6 +22,14 @@ import taagWideLogo from "../assets/optimized/taag-wide-logo.webp";
 import zbEngine from "../assets/optimized/zb-engine.webp";
 import zbEngineering from "../assets/optimized/zb-engineering.webp";
 import zbExterior from "../assets/optimized/zb-exterior.webp";
+import zbGalleryFive from "../assets/optimized/zb-gallery-five.webp";
+import zbGalleryFour from "../assets/optimized/zb-gallery-four.webp";
+import zbGalleryNine from "../assets/optimized/zb-gallery-nine.webp";
+import zbGalleryOne from "../assets/optimized/zb-gallery-one.webp";
+import zbGallerySeven from "../assets/optimized/zb-gallery-seven.webp";
+import zbGalleryTen from "../assets/optimized/zb-gallery-ten.webp";
+import zbGalleryThree from "../assets/optimized/zb-gallery-three.webp";
+import zbGalleryTwo from "../assets/optimized/zb-gallery-two.webp";
 import zbHero from "../assets/optimized/zb-hero.webp";
 import zbInterior from "../assets/optimized/zb-interior.webp";
 import zbLogo from "../assets/optimized/zb-logo.webp";
@@ -140,11 +157,19 @@ export const brands = [
       ],
       gallery: [
         zbProductHero,
-        zbHero,
+        zbGalleryOne,
+        zbGalleryTwo,
+        zbGalleryThree,
+        zbGalleryFour,
         zbExterior,
+        zbGalleryFive,
+        zbGallerySeven,
         zbInterior,
+        zbGalleryNine,
         zbEngineering,
+        zbGalleryTen,
         zbEngine,
+        zbHero,
       ],
       website: "www.zeiglerbailey.com",
       finalCta: "Begin a conversation",
@@ -264,8 +289,17 @@ export const brands = [
         encorProductHero,
         encorCurtainRaiser,
         encorElevatingEssence,
-        encorHero,
+        encorGallerySilver,
+        encorGalleryGreen,
+        encorGalleryBlack,
+        encorGallerySideflat,
+        encorGalleryRearFull,
+        encorGalleryRearLight,
+        encorGalleryDash,
+        encorGalleryEngine,
+        encorGalleryEleven,
         encorSpecialPlace,
+        encorHero,
       ],
       finalCta: "Configure your Series 1",
     },

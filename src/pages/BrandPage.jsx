@@ -193,7 +193,11 @@ function ProductGallery({ brand }) {
           {product.gallery.map((image, index) => (
             <figure
               key={`${brand.slug}-gallery-${index}`}
-              className="relative aspect-[4/3] overflow-hidden bg-stone-900"
+              className={`relative overflow-hidden bg-stone-900 ${
+                index === 0
+                  ? "aspect-[16/9] sm:col-span-2 lg:col-span-3"
+                  : "aspect-[4/3]"
+              }`}
             >
               <img
                 src={image}
