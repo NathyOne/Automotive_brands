@@ -52,7 +52,7 @@ export const brands = [
       src: zbLogo,
       alt: "Zeigler Bailey logo",
       homeClassName:
-        "w-[min(75%,18rem)] sm:w-[min(68%,23rem)] [filter:brightness(0)_invert(1)]",
+        "w-[min(75%,18rem)] translate-y-8 sm:w-[min(68%,23rem)] sm:translate-y-0 [filter:brightness(0)_invert(1)]",
       pageClassName:
         "w-[min(82%,19rem)] sm:w-[min(72%,24rem)] [filter:brightness(0)_invert(1)]",
       compactClassName: "w-28 [filter:brightness(0)_invert(1)]",
