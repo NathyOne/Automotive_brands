@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import BrandMark from "../components/BrandMark";
 import InquiryForm from "../components/InquiryForm";
@@ -76,7 +77,7 @@ function ProductHero({ brand }) {
       <img
         src={product.hero.image}
         alt={product.hero.alt}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="hero-drift absolute inset-0 h-full w-full object-cover"
         style={{ objectPosition: product.hero.objectPosition ?? "center" }}
       />
       <div className="absolute inset-0" style={{ background: heroOverlay }} />
@@ -117,13 +118,14 @@ function ProductIntro({ product }) {
   return (
     <section
       className="px-6 py-20 sm:px-8 lg:px-12"
+      data-reveal
       style={{
         backgroundColor: "var(--product-paper)",
         color: "var(--product-ink)",
       }}
     >
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
-        <div>
+        <div className="reveal-slide">
           <p
             className="text-[0.7rem] font-bold uppercase tracking-[0.5em]"
             style={{ color: "var(--product-muted)" }}
@@ -135,8 +137,9 @@ function ProductIntro({ product }) {
           </h2>
         </div>
         <div
-          className="space-y-6 text-base leading-8 sm:text-lg"
+          className="reveal-slide space-y-6 text-base leading-8 sm:text-lg"
           style={{ color: "var(--product-body)" }}
+          data-reveal-delay="120"
         >
           {product.intro.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -153,6 +156,7 @@ function ProductSection({ section, index }) {
   return (
     <section
       className="px-6 py-10 sm:px-8 lg:px-12 lg:py-14"
+      data-reveal
       style={{
         backgroundColor: "var(--product-paper)",
         color: "var(--product-ink)",
@@ -163,16 +167,22 @@ function ProductSection({ section, index }) {
           reverse ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
-        <figure className="relative min-h-[20rem] overflow-hidden bg-stone-200 sm:min-h-[28rem] lg:min-h-[34rem]">
+        <figure
+          className="reveal-image relative min-h-[20rem] overflow-hidden bg-stone-200 sm:min-h-[28rem] lg:min-h-[34rem]"
+          data-reveal-delay={reverse ? "120" : "0"}
+        >
           <img
             src={section.image}
             alt={section.alt}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover transition duration-[1400ms] ease-out"
             style={{ objectPosition: section.objectPosition ?? "center" }}
           />
         </figure>
 
-        <div className="py-4 lg:py-10">
+        <div
+          className="reveal-slide py-4 lg:py-10"
+          data-reveal-delay={reverse ? "0" : "120"}
+        >
           <p
             className="text-[0.68rem] font-bold uppercase tracking-[0.48em]"
             style={{ color: "var(--product-muted)" }}
@@ -202,13 +212,14 @@ function ProductGallery({ brand }) {
   return (
     <section
       className="px-6 py-20 sm:px-8 lg:px-12"
+      data-reveal
       style={{
         backgroundColor: "var(--product-dark)",
         color: "var(--product-dark-ink)",
       }}
     >
       <div className="mx-auto max-w-7xl">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div className="reveal-slide mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="eyebrow">Selected gallery</p>
             <h2 className="font-display mt-4 text-4xl sm:text-5xl">
@@ -231,11 +242,12 @@ function ProductGallery({ brand }) {
           {product.gallery.map((image, index) => (
             <figure
               key={`${brand.slug}-gallery-${index}`}
-              className={`relative overflow-hidden bg-stone-900 ${
+              className={`reveal-image relative overflow-hidden bg-stone-900 ${
                 index === 0
                   ? "aspect-[16/9] sm:col-span-2 lg:col-span-3"
                   : "aspect-[4/3]"
               }`}
+              data-reveal-delay={String(Math.min(index * 70, 280))}
             >
               <img
                 src={image}
@@ -255,13 +267,14 @@ function ProductContact({ brand }) {
     <section
       id="conversation"
       className="px-6 py-20 sm:px-8 lg:px-12"
+      data-reveal
       style={{
         backgroundColor: "var(--product-dark)",
         color: "var(--product-dark-ink)",
       }}
     >
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12">
-        <div>
+        <div className="reveal-slide">
           <p className="eyebrow">Begin a conversation</p>
           <h2 className="font-display mt-4 text-4xl sm:text-5xl">
             {brand.product.finalCta}
@@ -271,13 +284,46 @@ function ProductContact({ brand }) {
           </p>
         </div>
 
-        <InquiryForm brandName={brand.name} />
+        <div className="reveal-slide" data-reveal-delay="120">
+          <InquiryForm brandName={brand.name} />
+        </div>
       </div>
     </section>
   );
 }
 
 function ProductBrandPage({ brand }) {
+  useEffect(() => {
+    const revealItems = document.querySelectorAll("[data-reveal], .reveal-slide, .reveal-image");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          const delay = entry.target.dataset.revealDelay;
+
+          if (delay) {
+            entry.target.style.transitionDelay = `${delay}ms`;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: "0px 0px -12% 0px",
+        threshold: 0.14,
+      },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    return () => observer.disconnect();
+  }, [brand.slug]);
+
   const theme = brand.product.theme ?? {};
   const productStyle = {
     "--product-paper": theme.paper ?? "#f4f1ec",

@@ -116,6 +116,61 @@ textarea {
   animation: veil-in 1s ease both;
 }
 
+.hero-drift {
+  animation: hero-drift 14s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+[data-reveal],
+.reveal-slide,
+.reveal-image {
+  opacity: 0;
+  transform: translateY(44px);
+  transition:
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal-slide {
+  filter: blur(10px);
+}
+
+.reveal-image {
+  clip-path: inset(10% 0 10% 0);
+  transform: translateY(52px) scale(0.985);
+  transition:
+    clip-path 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].is-visible,
+.reveal-slide.is-visible,
+.reveal-image.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.reveal-image.is-visible {
+  clip-path: inset(0 0 0 0);
+}
+
+.reveal-image.is-visible img {
+  transform: scale(1.035);
+}
+
+@keyframes hero-drift {
+  from {
+    transform: scale(1.045) translateY(12px);
+  }
+
+  to {
+    transform: scale(1) translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -128,5 +183,14 @@ textarea {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  [data-reveal],
+  .reveal-slide,
+  .reveal-image {
+    clip-path: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
