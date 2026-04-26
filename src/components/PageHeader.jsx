@@ -3,12 +3,12 @@ import { brands, groupOverview } from "../content/siteContent";
 
 function PageHeader() {
   return (
-    <header className="absolute inset-x-0 top-0 z-30 bg-gradient-to-b from-black/72 via-black/34 to-transparent">
+    <header className="absolute inset-x-0 top-0 z-30 border-b border-white/10 bg-black/72 shadow-[0_18px_70px_rgba(0,0,0,0.34)] backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-5 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between gap-4">
           <Link
             to="/"
-            className="text-xs font-semibold uppercase tracking-[0.45em] text-stone-200 transition hover:text-white"
+            className="text-xs font-semibold uppercase tracking-[0.45em] text-white transition hover:text-stone-200"
           >
             {groupOverview.name}
           </Link>
@@ -26,8 +26,8 @@ function PageHeader() {
               className={({ isActive }) =>
                 `whitespace-nowrap rounded-full border px-4 py-2 transition ${
                   isActive
-                    ? "border-white/26 bg-white/[0.08] text-white"
-                    : "border-white/8 bg-black/20 text-stone-400 hover:border-white/16 hover:text-stone-200"
+                    ? "border-white/34 bg-white/18 text-white"
+                    : "border-white/14 bg-black/36 text-stone-200 hover:border-white/28 hover:bg-white/10 hover:text-white"
                 }`
               }
             >
