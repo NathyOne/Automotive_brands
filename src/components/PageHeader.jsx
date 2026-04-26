@@ -18,7 +18,7 @@ function PageHeader() {
           </Link>
         </div>
 
-        <nav className="flex gap-2 overflow-x-auto pb-1 text-[0.62rem] uppercase tracking-[0.34em] text-stone-400">
+        <nav className="flex gap-2 overflow-x-auto pb-1 text-[0.62rem] font-bold uppercase tracking-[0.34em]">
           {brands.map((brand) => (
             <NavLink
               key={brand.slug}
@@ -26,8 +26,8 @@ function PageHeader() {
               className={({ isActive }) =>
                 `whitespace-nowrap rounded-full border px-4 py-2 transition ${
                   isActive
-                    ? "border-white/34 bg-white/18 text-white"
-                    : "border-white/14 bg-black/36 text-stone-200 hover:border-white/28 hover:bg-white/10 hover:text-white"
+                    ? "border-white/85 bg-white text-stone-950 shadow-[0_8px_28px_rgba(0,0,0,0.28)]"
+                    : "border-white/35 bg-black/72 text-white shadow-[0_8px_24px_rgba(0,0,0,0.22)] hover:border-white/70 hover:bg-black/88"
                 }`
               }
             >
