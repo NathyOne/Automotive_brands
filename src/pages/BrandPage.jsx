@@ -63,16 +63,23 @@ function MediaCard({ item }) {
 
 function ProductHero({ brand }) {
   const { product } = brand;
+  const heroOverlay =
+    product.theme?.heroOverlay ??
+    "linear-gradient(180deg,rgba(0,0,0,0.56),rgba(0,0,0,0.1)_42%,rgba(0,0,0,0.82))";
+  const logoSrc = product.logo ?? brand.mark.src;
 
   return (
-    <section className="relative isolate min-h-[92svh] overflow-hidden bg-black">
+    <section
+      className="relative isolate min-h-[92svh] overflow-hidden"
+      style={{ backgroundColor: "var(--product-dark)" }}
+    >
       <img
         src={product.hero.image}
         alt={product.hero.alt}
         className="absolute inset-0 h-full w-full object-cover"
         style={{ objectPosition: product.hero.objectPosition ?? "center" }}
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.56),rgba(0,0,0,0.1)_42%,rgba(0,0,0,0.82))]" />
+      <div className="absolute inset-0" style={{ background: heroOverlay }} />
       <div className="absolute inset-0 opacity-45">
         <div className="grain h-full w-full" />
       </div>
@@ -84,7 +91,7 @@ function ProductHero({ brand }) {
           <div className="mx-auto flex justify-center">
             {product.logoClassName && brand.mark.type === "image" ? (
               <img
-                src={brand.mark.src}
+                src={logoSrc}
                 alt={brand.mark.alt}
                 className={`object-contain ${product.logoClassName}`}
               />
@@ -108,17 +115,29 @@ function ProductHero({ brand }) {
 
 function ProductIntro({ product }) {
   return (
-    <section className="bg-[#f4f1ec] px-6 py-20 text-stone-950 sm:px-8 lg:px-12">
+    <section
+      className="px-6 py-20 sm:px-8 lg:px-12"
+      style={{
+        backgroundColor: "var(--product-paper)",
+        color: "var(--product-ink)",
+      }}
+    >
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-start">
         <div>
-          <p className="text-[0.7rem] font-bold uppercase tracking-[0.5em] text-stone-500">
+          <p
+            className="text-[0.7rem] font-bold uppercase tracking-[0.5em]"
+            style={{ color: "var(--product-muted)" }}
+          >
             {product.eyebrow}
           </p>
-          <h2 className="font-display mt-5 text-4xl leading-tight text-stone-950 sm:text-5xl">
+          <h2 className="font-display mt-5 text-4xl leading-tight sm:text-5xl">
             {product.introTitle}
           </h2>
         </div>
-        <div className="space-y-6 text-base leading-8 text-stone-700 sm:text-lg">
+        <div
+          className="space-y-6 text-base leading-8 sm:text-lg"
+          style={{ color: "var(--product-body)" }}
+        >
           {product.intro.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -132,7 +151,13 @@ function ProductSection({ section, index }) {
   const reverse = index % 2 === 1;
 
   return (
-    <section className="bg-[#f4f1ec] px-6 py-10 text-stone-950 sm:px-8 lg:px-12 lg:py-14">
+    <section
+      className="px-6 py-10 sm:px-8 lg:px-12 lg:py-14"
+      style={{
+        backgroundColor: "var(--product-paper)",
+        color: "var(--product-ink)",
+      }}
+    >
       <div
         className={`mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:items-center lg:gap-14 ${
           reverse ? "lg:[&>*:first-child]:order-2" : ""
@@ -143,17 +168,24 @@ function ProductSection({ section, index }) {
             src={section.image}
             alt={section.alt}
             className="absolute inset-0 h-full w-full object-cover"
+            style={{ objectPosition: section.objectPosition ?? "center" }}
           />
         </figure>
 
         <div className="py-4 lg:py-10">
-          <p className="text-[0.68rem] font-bold uppercase tracking-[0.48em] text-stone-500">
+          <p
+            className="text-[0.68rem] font-bold uppercase tracking-[0.48em]"
+            style={{ color: "var(--product-muted)" }}
+          >
             {section.eyebrow}
           </p>
-          <h2 className="font-display mt-5 text-4xl leading-tight text-stone-950 sm:text-5xl">
+          <h2 className="font-display mt-5 text-4xl leading-tight sm:text-5xl">
             {section.title}
           </h2>
-          <div className="mt-7 space-y-5 text-sm leading-8 text-stone-700 sm:text-base">
+          <div
+            className="mt-7 space-y-5 text-sm leading-8 sm:text-base"
+            style={{ color: "var(--product-body)" }}
+          >
             {section.copy.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -168,12 +200,18 @@ function ProductGallery({ brand }) {
   const { product } = brand;
 
   return (
-    <section className="bg-black px-6 py-20 text-stone-100 sm:px-8 lg:px-12">
+    <section
+      className="px-6 py-20 sm:px-8 lg:px-12"
+      style={{
+        backgroundColor: "var(--product-dark)",
+        color: "var(--product-dark-ink)",
+      }}
+    >
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="eyebrow">Selected gallery</p>
-            <h2 className="font-display mt-4 text-4xl text-white sm:text-5xl">
+            <h2 className="font-display mt-4 text-4xl sm:text-5xl">
               Selected imagery.
             </h2>
           </div>
@@ -216,12 +254,16 @@ function ProductContact({ brand }) {
   return (
     <section
       id="conversation"
-      className="bg-black px-6 py-20 text-stone-100 sm:px-8 lg:px-12"
+      className="px-6 py-20 sm:px-8 lg:px-12"
+      style={{
+        backgroundColor: "var(--product-dark)",
+        color: "var(--product-dark-ink)",
+      }}
     >
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-12">
         <div>
           <p className="eyebrow">Begin a conversation</p>
-          <h2 className="font-display mt-4 text-4xl text-white sm:text-5xl">
+          <h2 className="font-display mt-4 text-4xl sm:text-5xl">
             {brand.product.finalCta}
           </h2>
           <p className="mt-6 max-w-md text-sm leading-8 text-stone-300 sm:text-base">
@@ -236,8 +278,18 @@ function ProductContact({ brand }) {
 }
 
 function ProductBrandPage({ brand }) {
+  const theme = brand.product.theme ?? {};
+  const productStyle = {
+    "--product-paper": theme.paper ?? "#f4f1ec",
+    "--product-ink": theme.ink ?? "#1c1917",
+    "--product-body": theme.body ?? theme.muted ?? "#44403c",
+    "--product-muted": theme.muted ?? "#78716c",
+    "--product-dark": theme.dark ?? "#000000",
+    "--product-dark-ink": theme.darkInk ?? "#f5f5f4",
+  };
+
   return (
-    <main className="bg-[#f4f1ec] text-stone-950">
+    <main style={productStyle}>
       <ProductHero brand={brand} />
       <ProductIntro product={brand.product} />
       {brand.product.sections.map((section, index) => (
@@ -249,7 +301,14 @@ function ProductBrandPage({ brand }) {
       ))}
       <ProductGallery brand={brand} />
       <ProductContact brand={brand} />
-      <RelatedBrands currentSlug={brand.slug} />
+      <div
+        style={{
+          backgroundColor: "var(--product-dark)",
+          color: "var(--product-dark-ink)",
+        }}
+      >
+        <RelatedBrands currentSlug={brand.slug} />
+      </div>
     </main>
   );
 }

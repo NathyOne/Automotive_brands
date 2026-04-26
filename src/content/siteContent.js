@@ -1,5 +1,10 @@
 import classicDriverHero from "../assets/optimized/classic-driver-hero.webp";
+import classicDriverCollectingPurpose from "../assets/optimized/classic-driver-collecting-purpose.webp";
+import classicDriverExperiencePerspective from "../assets/optimized/classic-driver-experience-perspective.webp";
 import classicDriverLogoCard from "../assets/optimized/classic-driver-logo.webp";
+import classicDriverLogoGreen from "../assets/optimized/classic-driver-logo-green.webp";
+import classicDriverMoreThanOwnership from "../assets/optimized/classic-driver-more-than-ownership.webp";
+import classicDriverProductHero from "../assets/optimized/classic-driver-product-hero.webp";
 import encorCurtainRaiser from "../assets/optimized/encor-curtain-raiser.webp";
 import encorElevatingEssence from "../assets/optimized/encor-elevating-essence.webp";
 import encorGalleryBlack from "../assets/optimized/encor-gallery-black.webp";
@@ -16,6 +21,10 @@ import encorLogo from "../assets/optimized/encor-logo.webp";
 import encorProductHero from "../assets/optimized/encor-product-hero.webp";
 import encorSpecialPlace from "../assets/optimized/encor-special-place.webp";
 import kerrHero from "../assets/optimized/kerr-hero.webp";
+import kerrGuntherEngine from "../assets/optimized/kerr-gunther-engine.webp";
+import kerrGuntherOne from "../assets/optimized/kerr-gunther-one.webp";
+import kerrKoenigseggOne from "../assets/optimized/kerr-koenigsegg-one.webp";
+import kerrKoenigseggTwo from "../assets/optimized/kerr-koenigsegg-two.webp";
 import kerrLogoCard from "../assets/optimized/kerr-logo.webp";
 import taagGlowLogo from "../assets/optimized/taag-glow-logo.webp";
 import taagWideLogo from "../assets/optimized/taag-wide-logo.webp";
@@ -97,7 +106,8 @@ export const brands = [
         className: "min-h-[16rem] lg:min-h-[20rem]",
       },
     ],
-    enquiryNote: "Use the form below for Zeigler Bailey enquiries.",
+    enquiryNote:
+      "Every Zeigler Bailey begins with a conversation. Contact us today and let's see how our visions align.",
     product: {
       hero: {
         image: zbProductHero,
@@ -226,7 +236,8 @@ export const brands = [
         className: "min-h-[16rem] lg:min-h-[20rem]",
       },
     ],
-    enquiryNote: "Use the form below for Encor enquiries.",
+    enquiryNote:
+      "Every Encor begins with a conversation. Contact us today and let's see how our visions align.",
     product: {
       hero: {
         image: encorProductHero,
@@ -242,6 +253,7 @@ export const brands = [
         "Encor reinterprets one of the automotive world's most iconic legacies for a new generation.",
       intro: [
         "Rooted in Lotus' enduring ethos of lightness, purity, and an uncompromised driving experience, each car is approached with respect for its origins and redefined through meticulous craftsmanship, precision, and contemporary technology.",
+        "Encor Series 1 is a complete reinterpretation of the iconic Lotus Esprit Series 1 from 1975, retained with original design philosophy and at the same time created for today's demands for performance and comfort.",
       ],
       sections: [
         {
@@ -301,6 +313,7 @@ export const brands = [
         encorSpecialPlace,
         encorHero,
       ],
+      website: "www.encor.design",
       finalCta: "Configure your Series 1",
     },
   },
@@ -308,9 +321,17 @@ export const brands = [
     slug: "classic-driver",
     name: "Classic Driver",
     category: "Bottom left tile",
-    intro: "Coming soon.",
-    paragraphs: ["Coming soon."],
-    highlights: ["Coming soon"],
+    intro: "Timeless cars. Legendary journeys.",
+    hoverDescription:
+      "A curated portal for classic and collectible cars, private sales, off-market sourcing, market insight, events and driving tours.",
+    paragraphs: [
+      "Classic Driver curates, sources and represents some of the finest classic and collectible cars from Australia and around the world.",
+    ],
+    highlights: [
+      "Classifieds & private sales",
+      "Off-market vehicle sourcing",
+      "Classic market insight",
+    ],
     tile: {
       image: classicDriverHero,
       alt: "Classic Driver interior detail image",
@@ -350,15 +371,89 @@ export const brands = [
         className: "min-h-[16rem] lg:min-h-[20rem]",
       },
     ],
-    enquiryNote: "Product information coming soon.",
+    enquiryNote:
+      "Every Classic Driver relationship begins with a conversation about the car, the collector and the journey ahead.",
+    product: {
+      theme: {
+        paper: "#f4efe2",
+        ink: "#173c2f",
+        muted: "#4f665a",
+        dark: "#12372b",
+        darkInk: "#f4efe2",
+        heroOverlay:
+          "linear-gradient(180deg,rgba(18,55,43,0.64),rgba(18,55,43,0.08)_42%,rgba(18,55,43,0.9))",
+      },
+      hero: {
+        image: classicDriverProductHero,
+        alt: "Classic Driver Porsche detail",
+        objectPosition: "50% 43%",
+      },
+      logo: classicDriverLogoGreen,
+      logoClassName: "w-[min(68%,17rem)] sm:w-[min(46%,21rem)]",
+      headline: "TIMELESS CARS. LEGENDARY JOURNEYS",
+      eyebrow: "Welcome to Classic Driver",
+      introTitle: "Your ultimate portal for classic and collectible cars.",
+      intro: [
+        "With decades of expertise and a passion for the collectable, Classic Driver is dedicated to curating, sourcing and advertising some of the finest classic cars from Australia and around the world.",
+        "Specialist in classifieds and private sales, off-market vehicle sourcing, classic market insight, events and driving tours, Classic Driver is your go-to for classic and collectible cars and their associated lifestyle.",
+      ],
+      sections: [
+        {
+          eyebrow: "Collecting with purpose",
+          title: "Exceptional cars deserve more than a transaction.",
+          image: classicDriverCollectingPurpose,
+          alt: "Classic Driver collectible car interior detail",
+          objectPosition: "50% 50%",
+          copy: [
+            "At Classic Driver, the world's most exceptional cars deserve context, guidance and the right next chapter. The focus is on collectible, significant and enthusiast-led automobiles: cars with provenance, rarity and emotional relevance.",
+            "From air-cooled Porsche icons and homologation specials to modern performance heroes and blue-chip collector pieces, every car is approached with the same principle: quality over volume, and long-term relationships over short-term sales.",
+          ],
+        },
+        {
+          eyebrow: "Experience shapes perspective",
+          title: "Commercial discipline with genuine enthusiast understanding.",
+          image: classicDriverExperiencePerspective,
+          alt: "Classic Driver classic Porsche rear detail",
+          objectPosition: "50% 56%",
+          copy: [
+            "Our perspective is shaped by decades inside the premium automotive world, with experience spanning Porsche, McLaren, Tesla, Dutton Garage and Classic Throttle Shop.",
+            "Classic Driver operates with a highly curated approach across sales, sourcing, consignment and private acquisition. Trust, discretion and clarity sit at the centre of every transaction.",
+          ],
+        },
+        {
+          eyebrow: "More than ownership",
+          title: "A long-term partner in the journey.",
+          image: classicDriverMoreThanOwnership,
+          alt: "Classic Driver lifestyle moment",
+          objectPosition: "50% 50%",
+          copy: [
+            "Beyond the cars themselves, Classic Driver is built around community, knowledge and the belief that ownership should feel as rewarding as acquisition.",
+            "From ongoing collection advice and discreet sourcing opportunities to market insight, event access and trusted introductions across the collector world, the role is to support the people who live with these cars.",
+          ],
+        },
+      ],
+      gallery: [
+        classicDriverProductHero,
+        classicDriverCollectingPurpose,
+        classicDriverExperiencePerspective,
+        classicDriverMoreThanOwnership,
+        classicDriverHero,
+      ],
+      website: "www.classicdriver.com.au",
+      finalCta: "Begin a conversation",
+    },
   },
   {
     slug: "kerr-collection",
     name: "Kerr Collection",
     category: "Bottom right tile",
-    intro: "Coming soon.",
-    paragraphs: ["Coming soon."],
-    highlights: ["Coming soon"],
+    intro: "Passion for everything that moves.",
+    hoverDescription:
+      "A premium automotive, collector vehicle and bespoke client advisory business with direct access to Koenigsegg and Gunther Werks in Australia.",
+    paragraphs: [
+      "Kerr Collection brings trust, insight and access to premium automotive, collector vehicles and bespoke client advisory.",
+    ],
+    highlights: ["Koenigsegg Australia", "Gunther Werks", "Client advisory"],
     tile: {
       image: kerrHero,
       alt: "Kerr Collection hypercar image",
@@ -398,7 +493,79 @@ export const brands = [
         className: "min-h-[16rem] lg:min-h-[20rem]",
       },
     ],
-    enquiryNote: "Product information coming soon.",
+    enquiryNote:
+      "Every Kerr Collection enquiry is handled with discretion, precision and long-term ownership in mind.",
+    product: {
+      hero: {
+        image: kerrHero,
+        alt: "Kerr Collection Koenigsegg Jesko",
+        objectPosition: "50% 50%",
+      },
+      logoClassName: "w-[min(48%,12rem)] sm:w-[min(32%,15rem)]",
+      headline: "PASSION FOR EVERYTHING THAT MOVES",
+      eyebrow: "Welcome to Kerr Collection",
+      introTitle:
+        "Trust, insight and access across the world's most significant cars.",
+      intro: [
+        "With decades of experience across premium automotive, collector vehicles and bespoke client advisory, Kerr Collection has built a reputation for trust, insight and access.",
+        "The approach is deeply personal, shaped by an understanding that the world's most significant cars are never just about transport, but about design, history, emotion and rarity. Every car, every client and every introduction is approached with intention.",
+      ],
+      sections: [
+        {
+          eyebrow: "Koenigsegg",
+          title: "Australia's exclusive representative.",
+          image: kerrKoenigseggOne,
+          alt: "Koenigsegg hypercar represented by Kerr Collection",
+          objectPosition: "50% 50%",
+          copy: [
+            "As the authorised Australian representative for Koenigsegg, Kerr Collection holds a uniquely important position within the world of hypercars.",
+            "Kerr Collection provides clients with direct access to the full Koenigsegg ownership experience, from new vehicle acquisition and bespoke commissioning through to ongoing ownership support and factory-backed servicing.",
+          ],
+        },
+        {
+          eyebrow: "At your service",
+          title: "A local partner for a global marque.",
+          image: kerrKoenigseggTwo,
+          alt: "Koenigsegg detail represented by Kerr Collection",
+          objectPosition: "50% 50%",
+          copy: [
+            "As the authorised dealer for both sales and service in Australia, Kerr Collection ensures every client receives the precision, discretion and factory-standard care expected from the brand globally.",
+            "From personalised specification consultations to technical aftersales support and long-term ownership management, Kerr Collection bridges Australian collectors and the world of Koenigsegg.",
+          ],
+        },
+        {
+          eyebrow: "Gunther Werks",
+          title: "From California to the Land Down Under.",
+          image: kerrGuntherOne,
+          alt: "Gunther Werks vehicle represented by Kerr Collection",
+          objectPosition: "50% 50%",
+          copy: [
+            "As the authorised Australian representative for Gunther Werks, Kerr Collection offers clients access to one of the most respected names in modern air-cooled Porsche reimagination.",
+            "Known globally for obsessive engineering, carbon-fibre craftsmanship and an uncompromising approach to the Porsche 993 platform, Gunther Werks represents the intersection of heritage, performance and contemporary precision.",
+          ],
+        },
+        {
+          eyebrow: "An experience unlike any other",
+          title: "Factory-backed expertise for every stage of ownership.",
+          image: kerrGuntherEngine,
+          alt: "Gunther Werks engine detail represented by Kerr Collection",
+          objectPosition: "50% 50%",
+          copy: [
+            "From initial consultation and commissioning through to aftersales care, technical servicing and long-term ownership management, Kerr Collection acts as the trusted local partner for Gunther Werks clients.",
+            "The result is direct access to new commissions, bespoke specifications and the full ownership journey for Australian collectors seeking something truly exceptional.",
+          ],
+        },
+      ],
+      gallery: [
+        kerrHero,
+        kerrKoenigseggOne,
+        kerrKoenigseggTwo,
+        kerrGuntherOne,
+        kerrGuntherEngine,
+      ],
+      website: "www.kerrcollection.com.au",
+      finalCta: "Begin a conversation",
+    },
   },
   {
     slug: "the-automotive-advisory-group",

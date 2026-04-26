@@ -181,10 +181,58 @@ const tasks = [
     quality: 78,
   },
   {
+    input: "pics/kerr/Koenigsegg1.jpg",
+    output: "kerr-koenigsegg-one.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/kerr/Koenigsegg2.jpg",
+    output: "kerr-koenigsegg-two.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/kerr/Gunther 1.jpg",
+    output: "kerr-gunther-one.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/kerr/Gunther Engine.jpg",
+    output: "kerr-gunther-engine.webp",
+    width: 1600,
+    quality: 82,
+  },
+  {
     input: "pics/cd/IMG_1320.jpeg",
     output: "classic-driver-hero.webp",
     width: 1400,
     quality: 80,
+  },
+  {
+    input: "pics/cd/Hero.jpg",
+    output: "classic-driver-product-hero.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/cd/Collecting with purpose.jpg",
+    output: "classic-driver-collecting-purpose.webp",
+    width: 1600,
+    quality: 82,
+  },
+  {
+    input: "pics/cd/Experience shapes perspective.jpg",
+    output: "classic-driver-experience-perspective.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/cd/More than ownership.PNG",
+    output: "classic-driver-more-than-ownership.webp",
+    width: 1400,
+    quality: 82,
   },
   {
     input: "pics/zeiglerBailey/ZB_logo_Mark_Type_HORZ_POS_RGB.png",
@@ -203,6 +251,12 @@ const tasks = [
   {
     input: "pics/cd/image.png",
     output: "classic-driver-logo.webp",
+    width: 900,
+    quality: 92,
+  },
+  {
+    input: "pics/cd/26BEBEFC-D5B3-4F46-BE47-038921DD014A.png",
+    output: "classic-driver-logo-green.webp",
     width: 900,
     quality: 92,
   },
