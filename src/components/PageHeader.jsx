@@ -3,7 +3,7 @@ import { brands, groupOverview } from "../content/siteContent";
 
 function PageHeader() {
   return (
-    <header className="absolute inset-x-0 top-0 z-30">
+    <header className="absolute inset-x-0 top-0 z-30 bg-gradient-to-b from-black/72 via-black/34 to-transparent">
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-5 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between gap-4">
           <Link
