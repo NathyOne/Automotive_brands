@@ -243,7 +243,8 @@ export const brands = [
         image: encorProductHero,
         alt: "Encor Series 1 front view",
         objectPosition: "50% 50%",
-        mobileObjectPosition: "63% 50%",
+        mobileFit: "contain",
+        mobileObjectPosition: "50% 34%",
       },
       logoClassName:
         "w-[min(68%,13rem)] [filter:brightness(0)_invert(1)] sm:w-[min(48%,17rem)]",

@@ -83,7 +83,9 @@ function ProductHero({ brand }) {
       <img
         src={product.hero.image}
         alt=""
-        className="hero-drift absolute inset-0 h-full w-full object-cover sm:hidden"
+        className={`hero-drift absolute inset-0 h-full w-full sm:hidden ${
+          product.hero.mobileFit === "contain" ? "object-contain" : "object-cover"
+        }`}
         style={{
           objectPosition:
             product.hero.mobileObjectPosition ??
