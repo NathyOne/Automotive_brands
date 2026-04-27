@@ -9,7 +9,6 @@ import encorCurtainRaiser from "../assets/optimized/encor-curtain-raiser.webp";
 import encorElevatingEssence from "../assets/optimized/encor-elevating-essence.webp";
 import encorGalleryBlack from "../assets/optimized/encor-gallery-black.webp";
 import encorGalleryDash from "../assets/optimized/encor-gallery-dash.webp";
-import encorGalleryEleven from "../assets/optimized/encor-gallery-eleven.webp";
 import encorGalleryEngine from "../assets/optimized/encor-gallery-engine.webp";
 import encorGalleryGreen from "../assets/optimized/encor-gallery-green.webp";
 import encorGalleryRearFull from "../assets/optimized/encor-gallery-rear-full.webp";
@@ -310,7 +309,6 @@ export const brands = [
         encorGalleryRearLight,
         encorGalleryDash,
         encorGalleryEngine,
-        encorGalleryEleven,
         encorSpecialPlace,
         encorHero,
       ],

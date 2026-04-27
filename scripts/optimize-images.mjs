@@ -145,12 +145,6 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/encor/eleven.JPG",
-    output: "encor-gallery-eleven.webp",
-    width: 1800,
-    quality: 82,
-  },
-  {
     input: "pics/encor/encor Black.jpg",
     output: "encor-gallery-black.webp",
     width: 1800,
