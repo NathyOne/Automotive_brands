@@ -5,24 +5,46 @@ import classicDriverLogoCard from "../assets/optimized/classic-driver-logo.webp"
 import classicDriverLogoGreen from "../assets/optimized/classic-driver-logo-green.webp";
 import classicDriverMoreThanOwnership from "../assets/optimized/classic-driver-more-than-ownership.webp";
 import classicDriverProductHero from "../assets/optimized/classic-driver-product-hero.webp";
+import classicDriverGallery5408 from "../assets/optimized/classic-driver-gallery-5408.webp";
+import classicDriverGallery5720 from "../assets/optimized/classic-driver-gallery-5720.webp";
+import classicDriverGallery6497 from "../assets/optimized/classic-driver-gallery-6497.webp";
+import classicDriverGallery6500 from "../assets/optimized/classic-driver-gallery-6500.webp";
+import classicDriverGallery6501 from "../assets/optimized/classic-driver-gallery-6501.webp";
+import classicDriverGallery6503 from "../assets/optimized/classic-driver-gallery-6503.webp";
+import classicDriverGallery6670 from "../assets/optimized/classic-driver-gallery-6670.webp";
+import classicDriverGalleryMiura from "../assets/optimized/classic-driver-gallery-miura.webp";
 import encorCurtainRaiser from "../assets/optimized/encor-curtain-raiser.webp";
 import encorElevatingEssence from "../assets/optimized/encor-elevating-essence.webp";
 import encorGalleryBlack from "../assets/optimized/encor-gallery-black.webp";
 import encorGalleryDash from "../assets/optimized/encor-gallery-dash.webp";
 import encorGalleryEngine from "../assets/optimized/encor-gallery-engine.webp";
 import encorGalleryGreen from "../assets/optimized/encor-gallery-green.webp";
+import encorGalleryLeadmoreFront from "../assets/optimized/encor-gallery-leadmore-front.webp";
+import encorGalleryLeadmoreRear from "../assets/optimized/encor-gallery-leadmore-rear.webp";
 import encorGalleryRearFull from "../assets/optimized/encor-gallery-rear-full.webp";
 import encorGalleryRearLight from "../assets/optimized/encor-gallery-rear-light.webp";
 import encorGallerySideflat from "../assets/optimized/encor-gallery-sideflat.webp";
+import encorGallerySideView from "../assets/optimized/encor-gallery-side-view.webp";
 import encorGallerySilver from "../assets/optimized/encor-gallery-silver.webp";
 import encorHero from "../assets/optimized/encor-hero.webp";
 import encorLogo from "../assets/optimized/encor-logo.webp";
 import encorProductHero from "../assets/optimized/encor-product-hero.webp";
 import encorSpecialPlace from "../assets/optimized/encor-special-place.webp";
+import kerrGuntherBlueRear from "../assets/optimized/kerr-gunther-blue-rear.webp";
 import kerrHero from "../assets/optimized/kerr-hero.webp";
 import kerrGuntherEngine from "../assets/optimized/kerr-gunther-engine.webp";
+import kerrGuntherGreenSide from "../assets/optimized/kerr-gunther-green-side.webp";
+import kerrGuntherInterior from "../assets/optimized/kerr-gunther-interior.webp";
+import kerrGuntherNight from "../assets/optimized/kerr-gunther-night.webp";
 import kerrGuntherOne from "../assets/optimized/kerr-gunther-one.webp";
+import kerrGuntherTrackFront from "../assets/optimized/kerr-gunther-track-front.webp";
+import kerrGuntherTrackRear from "../assets/optimized/kerr-gunther-track-rear.webp";
+import kerrKoenigseggJeskoFour from "../assets/optimized/kerr-koenigsegg-jesko-four.webp";
+import kerrKoenigseggJeskoSix from "../assets/optimized/kerr-koenigsegg-jesko-six.webp";
+import kerrKoenigseggJeskoThree from "../assets/optimized/kerr-koenigsegg-jesko-three.webp";
 import kerrKoenigseggOne from "../assets/optimized/kerr-koenigsegg-one.webp";
+import kerrKoenigseggPreSeriesJesko from "../assets/optimized/kerr-koenigsegg-pre-series-jesko.webp";
+import kerrKoenigseggService from "../assets/optimized/kerr-koenigsegg-service.webp";
 import kerrKoenigseggTwo from "../assets/optimized/kerr-koenigsegg-two.webp";
 import kerrLogoCard from "../assets/optimized/kerr-logo.webp";
 import taagGlowLogo from "../assets/optimized/taag-glow-logo.webp";
@@ -30,11 +52,13 @@ import taagWideLogo from "../assets/optimized/taag-wide-logo.webp";
 import zbEngine from "../assets/optimized/zb-engine.webp";
 import zbEngineering from "../assets/optimized/zb-engineering.webp";
 import zbExterior from "../assets/optimized/zb-exterior.webp";
+import zbGallery157 from "../assets/optimized/zb-gallery-157.webp";
 import zbGalleryFive from "../assets/optimized/zb-gallery-five.webp";
 import zbGalleryFour from "../assets/optimized/zb-gallery-four.webp";
 import zbGalleryNine from "../assets/optimized/zb-gallery-nine.webp";
 import zbGalleryOne from "../assets/optimized/zb-gallery-one.webp";
 import zbGallerySeven from "../assets/optimized/zb-gallery-seven.webp";
+import zbGallerySix from "../assets/optimized/zb-gallery-six.webp";
 import zbGalleryTen from "../assets/optimized/zb-gallery-ten.webp";
 import zbGalleryThree from "../assets/optimized/zb-gallery-three.webp";
 import zbGalleryTwo from "../assets/optimized/zb-gallery-two.webp";
@@ -180,6 +204,8 @@ export const brands = [
         zbGalleryTen,
         zbEngine,
         zbHero,
+        zbGallery157,
+        zbGallerySix,
       ],
       website: "www.zeiglerbailey.com",
       finalCta: "Begin a conversation",
@@ -313,6 +339,9 @@ export const brands = [
         encorGalleryEngine,
         encorSpecialPlace,
         encorHero,
+        encorGalleryLeadmoreFront,
+        encorGalleryLeadmoreRear,
+        encorGallerySideView,
       ],
       website: "www.encor.design",
       finalCta: "Configure your Series 1",
@@ -439,6 +468,14 @@ export const brands = [
         classicDriverExperiencePerspective,
         classicDriverMoreThanOwnership,
         classicDriverHero,
+        classicDriverGallery5720,
+        classicDriverGallery5408,
+        classicDriverGallery6497,
+        classicDriverGallery6500,
+        classicDriverGallery6501,
+        classicDriverGallery6503,
+        classicDriverGallery6670,
+        classicDriverGalleryMiura,
       ],
       website: "www.classicdriver.com.au",
       finalCta: "Begin a conversation",
@@ -515,7 +552,7 @@ export const brands = [
         {
           eyebrow: "Koenigsegg",
           title: "Australia's exclusive representative.",
-          image: kerrKoenigseggOne,
+          image: kerrKoenigseggJeskoThree,
           alt: "Koenigsegg hypercar represented by Kerr Collection",
           objectPosition: "50% 50%",
           copy: [
@@ -559,10 +596,21 @@ export const brands = [
       ],
       gallery: [
         kerrHero,
+        kerrKoenigseggJeskoThree,
         kerrKoenigseggOne,
         kerrKoenigseggTwo,
+        kerrKoenigseggPreSeriesJesko,
+        kerrKoenigseggService,
+        kerrKoenigseggJeskoFour,
+        kerrKoenigseggJeskoSix,
         kerrGuntherOne,
         kerrGuntherEngine,
+        kerrGuntherInterior,
+        kerrGuntherNight,
+        kerrGuntherTrackFront,
+        kerrGuntherTrackRear,
+        kerrGuntherBlueRear,
+        kerrGuntherGreenSide,
       ],
       website: "www.kerrcollection.com.au",
       finalCta: "Begin a conversation",

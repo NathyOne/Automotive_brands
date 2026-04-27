@@ -1,4 +1,5 @@
 import { mkdir } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
 
@@ -91,6 +92,18 @@ const tasks = [
     quality: 82,
   },
   {
+    input: "pics/new_pics/ZB-157.JPG",
+    output: "zb-gallery-157.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/Six.JPG",
+    output: "zb-gallery-six.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
     input: "pics/encor/dc1ae3652_001_Encor_Hero_Exterior1 (1).jpg",
     output: "encor-hero.webp",
     width: 2200,
@@ -169,6 +182,24 @@ const tasks = [
     quality: 82,
   },
   {
+    input: "pics/new_pics/Leadmore front.jpg",
+    output: "encor-gallery-leadmore-front.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/Leadmore Rear.jpg",
+    output: "encor-gallery-leadmore-rear.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/Encor side view.jpg",
+    output: "encor-gallery-side-view.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
     input: "pics/kerr/Kerr Collection Jesko.jpg",
     output: "kerr-hero.webp",
     width: 2200,
@@ -199,6 +230,72 @@ const tasks = [
     quality: 82,
   },
   {
+    input: "pics/new_pics/jESKO3.JPG",
+    output: "kerr-koenigsegg-jesko-three.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/Pre-series-Jesko-1.jpg",
+    output: "kerr-koenigsegg-pre-series-jesko.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/KoenigseggService.jpg",
+    output: "kerr-koenigsegg-service.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/jESKO4.JPG",
+    output: "kerr-koenigsegg-jesko-four.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/jESKO6.JPG",
+    output: "kerr-koenigsegg-jesko-six.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/85c0d1cd-4fa0-4f2b-a09f-6a5745dde5a6.jpeg",
+    output: "kerr-gunther-interior.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/1868f6b9-e08f-49f9-9057-916f7fc71211.jpeg",
+    output: "kerr-gunther-night.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/c6544e62-9da0-4115-acae-e180d7462eff.jpeg",
+    output: "kerr-gunther-track-front.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/3fa3bba7-843b-4f96-a6f0-4e547a3bd2fd.jpeg",
+    output: "kerr-gunther-track-rear.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/156cb690-4b3a-4739-b301-11f09a92279d.jpeg",
+    output: "kerr-gunther-blue-rear.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/77e7dff0-8c05-4730-a4a9-a7926dbe41c1.jpeg",
+    output: "kerr-gunther-green-side.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
     input: "pics/cd/IMG_1320.jpeg",
     output: "classic-driver-hero.webp",
     width: 1400,
@@ -226,6 +323,54 @@ const tasks = [
     input: "pics/cd/More than ownership.PNG",
     output: "classic-driver-more-than-ownership.webp",
     width: 1400,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/7CE6FEEE-C948-40BF-BD81-D855BD0BE9D4.png",
+    output: "classic-driver-gallery-miura.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/IMG_6670.webp",
+    output: "classic-driver-gallery-6670.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/IMG_6503.png",
+    output: "classic-driver-gallery-6503.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/IMG_6501.png",
+    output: "classic-driver-gallery-6501.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/IMG_6500.png",
+    output: "classic-driver-gallery-6500.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/IMG_6497.png",
+    output: "classic-driver-gallery-6497.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/DSC05408-Enhanced-NR.jpg",
+    output: "classic-driver-gallery-5408.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/new_pics/IMG_5720.jpeg",
+    output: "classic-driver-gallery-5720.webp",
+    width: 1800,
     quality: 82,
   },
   {
@@ -278,7 +423,15 @@ const tasks = [
 await mkdir(outputDir, { recursive: true });
 
 for (const task of tasks) {
-  let pipeline = sharp(path.join(rootDir, task.input));
+  const inputPath = path.join(rootDir, task.input);
+  const outputPath = path.join(outputDir, task.output);
+
+  if (!existsSync(inputPath)) {
+    console.warn(`Skipping missing input: ${task.input}`);
+    continue;
+  }
+
+  let pipeline = sharp(inputPath);
 
   if (task.trim) {
     pipeline = pipeline.trim();
@@ -287,7 +440,7 @@ for (const task of tasks) {
   await pipeline
     .resize({ width: task.width, withoutEnlargement: true })
     .webp({ quality: task.quality, alphaQuality: 92 })
-    .toFile(path.join(outputDir, task.output));
+    .toFile(outputPath);
 }
 
 console.log(`Optimized ${tasks.length} assets into ${outputDir}`);
