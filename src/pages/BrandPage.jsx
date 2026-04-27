@@ -77,8 +77,20 @@ function ProductHero({ brand }) {
       <img
         src={product.hero.image}
         alt={product.hero.alt}
-        className="hero-drift absolute inset-0 h-full w-full object-cover"
+        className="hero-drift absolute inset-0 hidden h-full w-full object-cover sm:block"
         style={{ objectPosition: product.hero.objectPosition ?? "center" }}
+      />
+      <img
+        src={product.hero.image}
+        alt=""
+        className="hero-drift absolute inset-0 h-full w-full object-cover sm:hidden"
+        style={{
+          objectPosition:
+            product.hero.mobileObjectPosition ??
+            product.hero.objectPosition ??
+            "center",
+        }}
+        aria-hidden="true"
       />
       <div className="absolute inset-0" style={{ background: heroOverlay }} />
       <div className="absolute inset-0 opacity-45">
