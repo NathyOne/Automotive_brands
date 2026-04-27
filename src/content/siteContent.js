@@ -117,6 +117,7 @@ export const brands = [
       logoClassName:
         "w-[min(78%,22rem)] [filter:brightness(0)_invert(1)] sm:w-[min(58%,30rem)]",
       headline: "FOR THE DRIVEN",
+      subheadline: "Exclusive Sales Partner",
       eyebrow: "Introducing Zeigler/Bailey",
       introTitle: "The world's first 4.4-litre, air-cooled, 2-valve flat six.",
       intro: [
