@@ -418,6 +418,61 @@ const tasks = [
     width: 900,
     quality: 88,
   },
+  {
+    input: "pics/Taag/image copy.png",
+    output: "taag-logo-dark.webp",
+    width: 1200,
+    quality: 90,
+    trim: true,
+  },
+  {
+    input: "pics/Taag/C44704EF-93E2-4E22-B4B1-F6728AB27DFC.png",
+    output: "taag-market-entry-one.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/Taag/3B58503F-9DD1-4F19-893A-E34C79014217.png",
+    output: "taag-market-entry-two.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/Taag/IMG_1174.jpeg",
+    output: "taag-market-entry-three.webp",
+    width: 1600,
+    quality: 82,
+  },
+  {
+    input: "pics/Taag/DB780811-BBB3-44CD-8A89-806F7EEE6CFB.png",
+    output: "taag-leadership-jay.webp",
+    width: 1600,
+    quality: 82,
+  },
+  {
+    input: "pics/Taag/DBCED698-A4C8-4BB7-82A4-13DDEAACBBCC.png",
+    output: "taag-leadership-collaboration.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/Taag/92E0D0C0-863B-4F7B-A5ED-1E4533F22CEC.png",
+    output: "taag-leadership-andrew.webp",
+    width: 1600,
+    quality: 82,
+  },
+  {
+    input: "pics/Taag/04071668-7DF2-47FE-B636-884A91E561DC.png",
+    output: "taag-strategic-networks.webp",
+    width: 1800,
+    quality: 82,
+  },
+  {
+    input: "pics/Taag/FE2035DA-AB5E-4E5D-9F2E-725EE8C3DB5B.png",
+    output: "taag-advisory-network.webp",
+    width: 1800,
+    quality: 82,
+  },
 ];
 
 await mkdir(outputDir, { recursive: true });

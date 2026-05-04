@@ -166,6 +166,11 @@ function ProductIntro({ product }) {
 
 function ProductSection({ section, index }) {
   const reverse = index % 2 === 1;
+  const mediaItems =
+    section.media ??
+    (section.image
+      ? [{ src: section.image, alt: section.alt, objectPosition: section.objectPosition }]
+      : []);
 
   return (
     <section
@@ -181,17 +186,46 @@ function ProductSection({ section, index }) {
           reverse ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
-        <figure
-          className="reveal-image relative min-h-[20rem] overflow-hidden bg-stone-200 sm:min-h-[28rem] lg:min-h-[34rem]"
-          data-reveal-delay={reverse ? "120" : "0"}
-        >
-          <img
-            src={section.image}
-            alt={section.alt}
-            className="absolute inset-0 h-full w-full object-cover transition duration-[1400ms] ease-out"
-            style={{ objectPosition: section.objectPosition ?? "center" }}
-          />
-        </figure>
+        {mediaItems.length > 1 ? (
+          <div
+            className={`reveal-image grid min-h-[24rem] gap-3 overflow-hidden sm:min-h-[30rem] ${
+              section.mediaLayout === "portraits"
+                ? "grid-cols-2"
+                : "grid-cols-2 grid-rows-2"
+            }`}
+            data-reveal-delay={reverse ? "120" : "0"}
+          >
+            {mediaItems.map((item, mediaIndex) => (
+              <figure
+                key={`${section.eyebrow}-${item.alt}`}
+                className={`relative overflow-hidden bg-stone-200 ${
+                  section.mediaLayout === "feature" && mediaIndex === 0
+                    ? "col-span-2 min-h-[15rem]"
+                    : "min-h-[11rem]"
+                }`}
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-[1400ms] ease-out"
+                  style={{ objectPosition: item.objectPosition ?? "center" }}
+                />
+              </figure>
+            ))}
+          </div>
+        ) : (
+          <figure
+            className="reveal-image relative min-h-[20rem] overflow-hidden bg-stone-200 sm:min-h-[28rem] lg:min-h-[34rem]"
+            data-reveal-delay={reverse ? "120" : "0"}
+          >
+            <img
+              src={mediaItems[0].src}
+              alt={mediaItems[0].alt}
+              className="absolute inset-0 h-full w-full object-cover transition duration-[1400ms] ease-out"
+              style={{ objectPosition: mediaItems[0].objectPosition ?? "center" }}
+            />
+          </figure>
+        )}
 
         <div
           className="reveal-slide py-4 lg:py-10"

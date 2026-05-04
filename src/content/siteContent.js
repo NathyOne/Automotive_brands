@@ -48,6 +48,15 @@ import kerrKoenigseggService from "../assets/optimized/kerr-koenigsegg-service.w
 import kerrKoenigseggTwo from "../assets/optimized/kerr-koenigsegg-two.webp";
 import kerrLogoCard from "../assets/optimized/kerr-logo.webp";
 import taagGlowLogo from "../assets/optimized/taag-glow-logo.webp";
+import taagAdvisoryNetwork from "../assets/optimized/taag-advisory-network.webp";
+import taagLeadershipAndrew from "../assets/optimized/taag-leadership-andrew.webp";
+import taagLeadershipCollaboration from "../assets/optimized/taag-leadership-collaboration.webp";
+import taagLeadershipJay from "../assets/optimized/taag-leadership-jay.webp";
+import taagLogoDark from "../assets/optimized/taag-logo-dark.webp";
+import taagMarketEntryOne from "../assets/optimized/taag-market-entry-one.webp";
+import taagMarketEntryThree from "../assets/optimized/taag-market-entry-three.webp";
+import taagMarketEntryTwo from "../assets/optimized/taag-market-entry-two.webp";
+import taagStrategicNetworks from "../assets/optimized/taag-strategic-networks.webp";
 import taagWideLogo from "../assets/optimized/taag-wide-logo.webp";
 import zbEngine from "../assets/optimized/zb-engine.webp";
 import zbEngineering from "../assets/optimized/zb-engineering.webp";
@@ -621,16 +630,23 @@ export const brands = [
     name: "The Automotive Advisory Group",
     shortName: "TAAG",
     category: "Bottom middle tile",
-    intro: "Coming soon.",
-    paragraphs: ["Coming soon."],
-    highlights: ["Coming soon"],
+    intro:
+      "Market entry, brand representation and executive go-to-market strategy for ambitious automotive brands entering Australia and New Zealand.",
+    paragraphs: [
+      "The Automotive Advisory Group operates at the intersection of premium automotive market entry, brand representation and executive go-to-market strategy across Australia and New Zealand.",
+    ],
+    highlights: [
+      "Market entry strategy",
+      "Brand representation",
+      "Strategic networks",
+    ],
     tile: {
-      image: null,
-      alt: "TAAG dark tile with centred logo",
+      image: taagMarketEntryOne,
+      alt: "TAAG premium automotive market entry image",
     },
     hero: {
-      image: null,
-      alt: "TAAG hero panel",
+      image: taagMarketEntryOne,
+      alt: "TAAG premium automotive hero image",
     },
     mark: {
       type: "image",
@@ -663,7 +679,165 @@ export const brands = [
         className: "min-h-[16rem] lg:min-h-[20rem]",
       },
     ],
-    enquiryNote: "Product information coming soon.",
+    enquiryNote:
+      "Every TAAG engagement begins with a clear conversation about market ambition, timing, commercial priorities and the right pathway into Australia and New Zealand.",
+    product: {
+      theme: {
+        paper: "#f1eee8",
+        ink: "#171717",
+        body: "#4a4640",
+        muted: "#6f6253",
+        dark: "#050505",
+        darkInk: "#f4f1ec",
+        heroOverlay:
+          "linear-gradient(180deg,rgba(0,0,0,0.64),rgba(0,0,0,0.16)_44%,rgba(0,0,0,0.88))",
+      },
+      hero: {
+        image: taagMarketEntryOne,
+        alt: "TAAG grand tourer in a studio setting",
+        objectPosition: "50% 54%",
+      },
+      logo: taagLogoDark,
+      logoClassName: "w-[min(78%,18rem)] sm:w-[min(52%,25rem)]",
+      headline: "REPRESENTING THE WORLD'S MOST AMBITIOUS AUTOMOTIVE BRANDS",
+      eyebrow: "Welcome to The Automotive Advisory Group",
+      introTitle:
+        "Market entry, representation and commercial leadership for Australia and New Zealand.",
+      intro: [
+        "For decades, The Automotive Advisory Group has operated at the intersection of premium automotive market entry, brand representation and executive go-to-market strategy across Australia and New Zealand.",
+        "TAAG guides emerging, specialist and high-value automotive brands through successful market introduction and long-term commercial growth, whether as a dedicated sales partner, strategic brand representative, EV market specialist or executive management platform for OEMs entering the region.",
+        "From boutique performance marques and luxury manufacturers to next-generation EV businesses and mobility platforms, TAAG provides the commercial leadership, local market intelligence and operational experience required to establish a meaningful and sustainable presence.",
+      ],
+      sections: [
+        {
+          eyebrow: "Market entry strategy",
+          title: "A clear pathway into Australia and New Zealand.",
+          mediaLayout: "feature",
+          media: [
+            {
+              src: taagMarketEntryTwo,
+              alt: "TAAG market entry strategy presentation",
+              objectPosition: "50% 50%",
+            },
+            {
+              src: taagMarketEntryOne,
+              alt: "TAAG market entry vehicle profile",
+              objectPosition: "50% 54%",
+            },
+            {
+              src: taagMarketEntryThree,
+              alt: "TAAG market entry vehicle studio image",
+              objectPosition: "50% 58%",
+            },
+          ],
+          copy: [
+            "Defining the pathway to Australia and New Zealand requires more than route-to-market planning. It demands a clear understanding of where the brand should sit within the market and how it can succeed long term.",
+            "TAAG advises on commercial model, distribution architecture, pricing position, competitor landscape, customer profile, demand signals, launch readiness and long-term viability.",
+          ],
+        },
+        {
+          eyebrow: "Brand representation",
+          title: "A local extension of the marque, not just an appointment.",
+          mediaLayout: "feature",
+          media: [
+            {
+              src: zbProductHero,
+              alt: "Zeigler Bailey brand representation image",
+              objectPosition: "50% 58%",
+            },
+            {
+              src: encorProductHero,
+              alt: "Encor brand representation image",
+              objectPosition: "50% 50%",
+            },
+            {
+              src: kerrKoenigseggJeskoThree,
+              alt: "Kerr Collection brand representation image",
+              objectPosition: "50% 50%",
+            },
+          ],
+          copy: [
+            "Brand representation at TAAG is built on alignment. We act as the physical and strategic extension of a marque within the Australian and New Zealand markets, translating global intent into a locally resonant presence without diluting its origin.",
+            "Through partner networks, TAAG represents visionary automotive brands including Zeigler Bailey, Encor Design, Classic Driver and Kerr Collection, while supporting broader strategic relationships with marques such as Koenigsegg and Gunther Werks through official local channels.",
+          ],
+        },
+        {
+          eyebrow: "Electric vehicle and future mobility",
+          title: "Pragmatic guidance for a market in transition.",
+          image: taagMarketEntryTwo,
+          alt: "TAAG electric vehicle market planning image",
+          objectPosition: "50% 50%",
+          copy: [
+            "TAAG advises on electric vehicle transformation and future mobility strategy, supporting OEMs, new entrants and premium brands navigating one of the most significant shifts in automotive history.",
+            "This capability is underpinned by first-hand experience in pioneering electric vehicles in Australia, including the introduction of Tesla during its earliest global expansion phase. That experience now informs an insight-led advisory model grounded in both ambition and operational reality.",
+          ],
+        },
+        {
+          eyebrow: "Strategic relationships",
+          title: "The right conversations, with the right people, at the right time.",
+          image: taagStrategicNetworks,
+          alt: "TAAG strategic network visualization",
+          objectPosition: "50% 50%",
+          copy: [
+            "Strategic relationships at TAAG are deliberately built. We operate at the centre of a curated network spanning OEMs, boutique manufacturers, collectors, distributors and complementary luxury and lifestyle partners.",
+            "Whether facilitating market entry, unlocking distribution pathways, enabling brand collaborations or introducing high-value clients, TAAG ensures each interaction is purposeful and aligned with the broader strategic intent.",
+          ],
+        },
+        {
+          eyebrow: "Leadership",
+          title: "Senior automotive leadership with local execution focus.",
+          mediaLayout: "feature",
+          media: [
+            {
+              src: taagLeadershipCollaboration,
+              alt: "TAAG leadership market entry discussion",
+              objectPosition: "50% 50%",
+            },
+            {
+              src: taagLeadershipJay,
+              alt: "Jay McCormack, Director and Co-Founder",
+              objectPosition: "50% 50%",
+            },
+            {
+              src: taagLeadershipAndrew,
+              alt: "Andrew Kerr, Director and Co-Founder",
+              objectPosition: "50% 50%",
+            },
+          ],
+          copy: [
+            "TAAG is led by Jay McCormack and Andrew Kerr, combining senior automotive leadership, premium brand experience and direct market execution capability across Australia and New Zealand.",
+            "Their work spans OEM leadership, collector-car ecosystems, luxury automotive retail, specialist marque representation and the commercial realities of building presence in a demanding regional market.",
+          ],
+        },
+        {
+          eyebrow: "Advisory network",
+          title: "Global perspective strengthened by senior strategic advisors.",
+          image: taagAdvisoryNetwork,
+          alt: "TAAG advisory network boardroom image",
+          objectPosition: "50% 50%",
+          copy: [
+            "TAAG is supported by a select network of senior strategic advisors whose experience spans global OEM leadership, luxury automotive retail, international market entry, dealer network development, premium brand growth and executive governance.",
+            "This advisory capability brings perspective shaped by boardrooms, factory floors, retail networks, distributor operations and complex commercial environments across Europe, North America, Asia-Pacific and Australia.",
+          ],
+        },
+      ],
+      gallery: [
+        taagMarketEntryOne,
+        taagMarketEntryTwo,
+        taagMarketEntryThree,
+        taagLeadershipCollaboration,
+        taagLeadershipJay,
+        taagLeadershipAndrew,
+        taagStrategicNetworks,
+        taagAdvisoryNetwork,
+        zbProductHero,
+        encorProductHero,
+        classicDriverProductHero,
+        kerrHero,
+      ],
+      website: "www.theautomotive.group",
+      finalCta: "Begin a conversation",
+    },
   },
 ];
 
