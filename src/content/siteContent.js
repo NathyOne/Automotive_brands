@@ -809,6 +809,24 @@ export const brands = [
             "TAAG is led by Jay McCormack and Andrew Kerr, combining senior automotive leadership, premium brand experience and direct market execution capability across Australia and New Zealand.",
             "Their work spans OEM leadership, collector-car ecosystems, luxury automotive retail, specialist marque representation and the commercial realities of building presence in a demanding regional market.",
           ],
+          profiles: [
+            {
+              name: "Jay McCormack",
+              title: "Director & Co-Founder",
+              copy: [
+                "Jay McCormack is Director and Co-Founder of The Automotive Advisory Group, bringing more than three decades of experience across some of the most respected names in the global automotive industry. His career spans senior roles with Porsche, Tesla and McLaren, where he was instrumental in market introduction and development, brand positioning and the delivery of premium customer experiences across both established and emerging segments.",
+                "Jay later led Classic Throttle Shop, helping build Australia's leading classic and collector car businesses, before its integration into the Dutton Group. His experience bridges OEM, retail and collector markets, underpinned by a deep network and a practical understanding of how to successfully introduce, position and grow premium automotive brands in Australia and New Zealand.",
+              ],
+            },
+            {
+              name: "Andrew Kerr",
+              title: "Director & Co-Founder",
+              copy: [
+                "Andrew Kerr is Director and Co-Founder of The Automotive Advisory Group, with more than 15 years of experience with Porsche across senior sales and management roles. During this time, he developed a deep understanding of premium customer engagement, dealer network performance and the commercial dynamics required to successfully represent high-value automotive brands.",
+                "He later established Sullivan Kerr & Kerr Collection, building a highly regarded presence in the luxury and performance segment with a focus on rare and collectible marques, and working in close alignment with globally recognised brands such as Koenigsegg and Gunther Werks. Andrew's experience combines OEM discipline with entrepreneurial execution, underpinned by a strong network and a practical understanding of how to position and grow premium automotive brands within the Oceania region.",
+              ],
+            },
+          ],
         },
         {
           eyebrow: "Advisory network",

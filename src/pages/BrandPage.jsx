@@ -248,6 +248,35 @@ function ProductSection({ section, index }) {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          {section.profiles ? (
+            <div className="mt-9 grid gap-6">
+              {section.profiles.map((profile) => (
+                <article
+                  key={profile.name}
+                  className="border-t pt-6"
+                  style={{ borderColor: "color-mix(in srgb, var(--product-muted) 28%, transparent)" }}
+                >
+                  <p
+                    className="text-[0.68rem] font-bold uppercase tracking-[0.34em]"
+                    style={{ color: "var(--product-muted)" }}
+                  >
+                    {profile.title}
+                  </p>
+                  <h3 className="font-display mt-3 text-3xl leading-tight">
+                    {profile.name}
+                  </h3>
+                  <div
+                    className="mt-5 space-y-4 text-sm leading-8 sm:text-base"
+                    style={{ color: "var(--product-body)" }}
+                  >
+                    {profile.copy.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </section>
