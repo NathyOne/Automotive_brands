@@ -456,7 +456,7 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/Taag/DBCED698-A4C8-4BB7-82A4-13DDEAACBBCC.png",
+    input: "pics/taag_new/Encor side view (2).jpg",
     output: "taag-leadership-collaboration.webp",
     width: 1800,
     quality: 82,
