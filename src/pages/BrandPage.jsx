@@ -248,52 +248,52 @@ function ProductSection({ section, index }) {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          {section.profiles ? (
-            <div className="mt-9 grid gap-6 sm:grid-cols-2">
-              {section.profiles.map((profile) => (
-                <article
-                  key={profile.name}
-                  className="overflow-hidden border-t pt-6"
-                  style={{
-                    borderColor:
-                      "color-mix(in srgb, var(--product-muted) 28%, transparent)",
-                  }}
-                >
-                  {profile.image ? (
-                    <figure className="relative mb-6 aspect-[4/5] overflow-hidden bg-stone-200">
-                      <img
-                        src={profile.image}
-                        alt={profile.alt}
-                        className="absolute inset-0 h-full w-full object-cover"
-                        style={{
-                          objectPosition: profile.objectPosition ?? "center",
-                        }}
-                      />
-                    </figure>
-                  ) : null}
-                  <p
-                    className="text-[0.68rem] font-bold uppercase tracking-[0.34em]"
-                    style={{ color: "var(--product-muted)" }}
-                  >
-                    {profile.title}
-                  </p>
-                  <h3 className="font-display mt-3 text-3xl leading-tight">
-                    {profile.name}
-                  </h3>
-                  <div
-                    className="mt-5 space-y-4 text-sm leading-8 sm:text-base"
-                    style={{ color: "var(--product-body)" }}
-                  >
-                    {profile.copy.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          ) : null}
         </div>
       </div>
+      {section.profiles ? (
+        <div className="mx-auto mt-12 grid max-w-7xl gap-8 sm:grid-cols-2 lg:mt-16">
+          {section.profiles.map((profile) => (
+            <article
+              key={profile.name}
+              className="reveal-slide overflow-hidden border-t pt-6"
+              style={{
+                borderColor:
+                  "color-mix(in srgb, var(--product-muted) 28%, transparent)",
+              }}
+            >
+              {profile.image ? (
+                <figure className="relative mb-6 aspect-[4/5] overflow-hidden bg-stone-200">
+                  <img
+                    src={profile.image}
+                    alt={profile.alt}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    style={{
+                      objectPosition: profile.objectPosition ?? "center",
+                    }}
+                  />
+                </figure>
+              ) : null}
+              <p
+                className="text-[0.68rem] font-bold uppercase tracking-[0.34em]"
+                style={{ color: "var(--product-muted)" }}
+              >
+                {profile.title}
+              </p>
+              <h3 className="font-display mt-3 text-3xl leading-tight">
+                {profile.name}
+              </h3>
+              <div
+                className="mt-5 space-y-4 text-sm leading-8 sm:text-base"
+                style={{ color: "var(--product-body)" }}
+              >
+                {profile.copy.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : null}
     </section>
   );
 }
