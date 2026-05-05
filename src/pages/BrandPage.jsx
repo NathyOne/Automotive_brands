@@ -249,13 +249,28 @@ function ProductSection({ section, index }) {
             ))}
           </div>
           {section.profiles ? (
-            <div className="mt-9 grid gap-6">
+            <div className="mt-9 grid gap-6 sm:grid-cols-2">
               {section.profiles.map((profile) => (
                 <article
                   key={profile.name}
-                  className="border-t pt-6"
-                  style={{ borderColor: "color-mix(in srgb, var(--product-muted) 28%, transparent)" }}
+                  className="overflow-hidden border-t pt-6"
+                  style={{
+                    borderColor:
+                      "color-mix(in srgb, var(--product-muted) 28%, transparent)",
+                  }}
                 >
+                  {profile.image ? (
+                    <figure className="relative mb-6 aspect-[4/5] overflow-hidden bg-stone-200">
+                      <img
+                        src={profile.image}
+                        alt={profile.alt}
+                        className="absolute inset-0 h-full w-full object-cover"
+                        style={{
+                          objectPosition: profile.objectPosition ?? "center",
+                        }}
+                      />
+                    </figure>
+                  ) : null}
                   <p
                     className="text-[0.68rem] font-bold uppercase tracking-[0.34em]"
                     style={{ color: "var(--product-muted)" }}
