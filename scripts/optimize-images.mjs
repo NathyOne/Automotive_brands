@@ -438,6 +438,24 @@ const tasks = [
     quality: 82,
   },
   {
+    input: "pics/taag_new/IMG_1250.jpeg",
+    output: "taag-wide-display.webp",
+    width: 1800,
+    quality: 84,
+  },
+  {
+    input: "pics/taag_new/taag_visual_clean (1).png",
+    output: "taag-grey-wall-car.webp",
+    width: 1800,
+    quality: 84,
+    extract: {
+      left: 0,
+      top: 768,
+      width: 1076,
+      height: 256,
+    },
+  },
+  {
     input: "pics/taag_new/Tesla Electric Sydney.jpeg",
     output: "taag-tesla-sydney.webp",
     width: 1600,
@@ -450,7 +468,7 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/taag_new/taag_portrait_master.jpeg",
+    input: "pics/taag_new/EB9FE7F8-D5E6-47FF-8F75-EF3F4D766108.png",
     output: "taag-leadership-jay.webp",
     width: 1600,
     quality: 82,
@@ -462,7 +480,7 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/taag_new/IMG_1239.jpeg",
+    input: "pics/taag_new/2122AB11-0AFD-4DF2-9D52-A08EE21DCF4A.png",
     output: "taag-leadership-andrew.webp",
     width: 1600,
     quality: 82,
@@ -496,6 +514,10 @@ for (const task of tasks) {
 
   if (task.trim) {
     pipeline = pipeline.trim();
+  }
+
+  if (task.extract) {
+    pipeline = pipeline.extract(task.extract);
   }
 
   await pipeline

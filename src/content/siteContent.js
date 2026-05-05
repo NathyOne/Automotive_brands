@@ -53,11 +53,13 @@ import taagLeadershipAndrew from "../assets/optimized/taag-leadership-andrew.web
 import taagLeadershipCollaboration from "../assets/optimized/taag-leadership-collaboration.webp";
 import taagLeadershipJay from "../assets/optimized/taag-leadership-jay.webp";
 import taagLogoDark from "../assets/optimized/taag-logo-dark.webp";
+import taagGreyWallCar from "../assets/optimized/taag-grey-wall-car.webp";
 import taagMarketEntryOne from "../assets/optimized/taag-market-entry-one.webp";
 import taagMarketEntryThree from "../assets/optimized/taag-market-entry-three.webp";
 import taagMarketEntryTwo from "../assets/optimized/taag-market-entry-two.webp";
 import taagStrategicNetworks from "../assets/optimized/taag-strategic-networks.webp";
 import taagTeslaSydney from "../assets/optimized/taag-tesla-sydney.webp";
+import taagWideDisplay from "../assets/optimized/taag-wide-display.webp";
 import taagWideLogo from "../assets/optimized/taag-wide-logo.webp";
 import zbEngine from "../assets/optimized/zb-engine.webp";
 import zbEngineering from "../assets/optimized/zb-engineering.webp";
@@ -742,13 +744,13 @@ export const brands = [
           mediaLayout: "feature",
           media: [
             {
-              src: zbProductHero,
-              alt: "Zeigler Bailey brand representation image",
-              objectPosition: "50% 58%",
+              src: taagWideDisplay,
+              alt: "TAAG market image board",
+              objectPosition: "50% 50%",
             },
             {
-              src: encorProductHero,
-              alt: "Encor brand representation image",
+              src: taagGreyWallCar,
+              alt: "TAAG vehicle against a grey studio wall",
               objectPosition: "50% 50%",
             },
             {
@@ -835,6 +837,8 @@ export const brands = [
         taagMarketEntryOne,
         taagMarketEntryTwo,
         taagTeslaSydney,
+        taagWideDisplay,
+        taagGreyWallCar,
         taagMarketEntryThree,
         taagLeadershipCollaboration,
         taagStrategicNetworks,

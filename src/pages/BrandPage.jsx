@@ -262,7 +262,7 @@ function ProductSection({ section, index }) {
               }}
             >
               {profile.image ? (
-                <figure className="relative mb-6 aspect-[4/5] overflow-hidden bg-stone-200">
+                <figure className="relative mb-6 aspect-[2/3] overflow-hidden bg-stone-200">
                   <img
                     src={profile.image}
                     alt={profile.alt}
