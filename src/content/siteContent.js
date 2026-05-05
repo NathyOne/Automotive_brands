@@ -57,6 +57,7 @@ import taagMarketEntryOne from "../assets/optimized/taag-market-entry-one.webp";
 import taagMarketEntryThree from "../assets/optimized/taag-market-entry-three.webp";
 import taagMarketEntryTwo from "../assets/optimized/taag-market-entry-two.webp";
 import taagStrategicNetworks from "../assets/optimized/taag-strategic-networks.webp";
+import taagTeslaSydney from "../assets/optimized/taag-tesla-sydney.webp";
 import taagWideLogo from "../assets/optimized/taag-wide-logo.webp";
 import zbEngine from "../assets/optimized/zb-engine.webp";
 import zbEngineering from "../assets/optimized/zb-engineering.webp";
@@ -694,11 +695,11 @@ export const brands = [
       },
       hero: {
         image: taagMarketEntryOne,
-        alt: "TAAG grand tourer in a studio setting",
-        objectPosition: "50% 54%",
+        alt: "TAAG vehicle overlooking Sydney Harbour",
+        objectPosition: "54% 50%",
       },
       logo: taagLogoDark,
-      logoClassName: "w-[min(78%,18rem)] sm:w-[min(52%,25rem)]",
+      logoClassName: "w-[min(84%,19rem)] sm:w-[min(58%,27rem)]",
       headline: "REPRESENTING THE WORLD'S MOST AMBITIOUS AUTOMOTIVE BRANDS",
       eyebrow: "Welcome to The Automotive Advisory Group",
       introTitle:
@@ -716,13 +717,13 @@ export const brands = [
           media: [
             {
               src: taagMarketEntryTwo,
-              alt: "TAAG market entry strategy presentation",
+              alt: "TAAG Australia and New Zealand market entry visualization",
               objectPosition: "50% 50%",
             },
             {
               src: taagMarketEntryOne,
-              alt: "TAAG market entry vehicle profile",
-              objectPosition: "50% 54%",
+              alt: "TAAG vehicle overlooking Sydney Harbour",
+              objectPosition: "54% 50%",
             },
             {
               src: taagMarketEntryThree,
@@ -764,8 +765,8 @@ export const brands = [
         {
           eyebrow: "Electric vehicle and future mobility",
           title: "Pragmatic guidance for a market in transition.",
-          image: taagMarketEntryTwo,
-          alt: "TAAG electric vehicle market planning image",
+          image: taagTeslaSydney,
+          alt: "Tesla Model S driving in Sydney",
           objectPosition: "50% 50%",
           copy: [
             "TAAG advises on electric vehicle transformation and future mobility strategy, supporting OEMs, new entrants and premium brands navigating one of the most significant shifts in automotive history.",
@@ -824,6 +825,7 @@ export const brands = [
       gallery: [
         taagMarketEntryOne,
         taagMarketEntryTwo,
+        taagTeslaSydney,
         taagMarketEntryThree,
         taagLeadershipCollaboration,
         taagLeadershipJay,

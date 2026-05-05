@@ -406,7 +406,7 @@ const tasks = [
     quality: 88,
   },
   {
-    input: "pics/Taag/IMG_0924.png",
+    input: "pics/taag_new/IMG_1240 (1).png",
     output: "taag-wide-logo.webp",
     width: 1200,
     quality: 90,
@@ -419,23 +419,29 @@ const tasks = [
     quality: 88,
   },
   {
-    input: "pics/Taag/image copy.png",
+    input: "pics/taag_new/IMG_1240 (1).png",
     output: "taag-logo-dark.webp",
     width: 1200,
     quality: 90,
     trim: true,
   },
   {
-    input: "pics/Taag/C44704EF-93E2-4E22-B4B1-F6728AB27DFC.png",
+    input: "pics/taag_new/39B9C5A5-383D-4B9C-90D7-FFDFBE0671A1.png",
     output: "taag-market-entry-one.webp",
     width: 1800,
     quality: 82,
   },
   {
-    input: "pics/Taag/3B58503F-9DD1-4F19-893A-E34C79014217.png",
+    input: "pics/taag_new/taag_visual_clean.png",
     output: "taag-market-entry-two.webp",
     width: 1800,
     quality: 82,
+  },
+  {
+    input: "pics/taag_new/Tesla Electric Sydney.jpeg",
+    output: "taag-tesla-sydney.webp",
+    width: 1600,
+    quality: 86,
   },
   {
     input: "pics/Taag/IMG_1174.jpeg",
@@ -444,7 +450,7 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/Taag/DB780811-BBB3-44CD-8A89-806F7EEE6CFB.png",
+    input: "pics/taag_new/taag_portrait_master.jpeg",
     output: "taag-leadership-jay.webp",
     width: 1600,
     quality: 82,
@@ -456,7 +462,7 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/Taag/92E0D0C0-863B-4F7B-A5ED-1E4533F22CEC.png",
+    input: "pics/taag_new/IMG_1239.jpeg",
     output: "taag-leadership-andrew.webp",
     width: 1600,
     quality: 82,
