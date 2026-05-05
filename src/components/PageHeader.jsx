@@ -29,7 +29,7 @@ function PageHeader() {
                   className={({ isActive }) =>
                     `rounded-full border px-4 py-3 transition ${
                       isActive
-                        ? "border-white/55 bg-white/92 text-stone-950"
+                        ? "border-white/60 bg-stone-950/92 text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18),0_10px_28px_rgba(0,0,0,0.32)]"
                         : "border-white/14 bg-white/[0.06] text-white/88 hover:border-white/34 hover:bg-white/14 hover:text-white"
                     }`
                   }
@@ -56,12 +56,12 @@ function PageHeader() {
               className={({ isActive }) =>
                 `whitespace-nowrap rounded-full border px-4 py-2 transition ${
                   isActive
-                    ? "border-white/55 bg-white/92 text-stone-950 shadow-[0_10px_28px_rgba(0,0,0,0.28)]"
+                    ? "border-white/60 bg-stone-950/92 text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.18),0_10px_28px_rgba(0,0,0,0.32)]"
                     : "border-white/18 bg-white/[0.07] text-white/88 hover:border-white/34 hover:bg-white/14 hover:text-white"
                 }`
               }
             >
-              {brand.name}
+              {brand.shortName ?? brand.name}
             </NavLink>
           ))}
         </nav>
