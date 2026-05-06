@@ -4,6 +4,14 @@
   color-scheme: dark;
   --font-sans: "Manrope", sans-serif;
   --font-display: "Cormorant Garamond", serif;
+  /**
+   * Single editorial motion scale — entrances, veils, scroll reveals share this curve.
+   */
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-rise-duration: 880ms;
+  --motion-veil-duration: 880ms;
+  --motion-reveal-duration: 900ms;
+  --motion-reveal-image-duration: 1100ms;
   --page-bg: #050505;
   --page-fg: #f6f1ea;
   --page-muted: rgba(246, 241, 234, 0.72);
@@ -76,6 +84,25 @@ textarea {
   .contact-input {
     @apply w-full rounded-none border border-white/10 bg-white/[0.03] px-4 py-4 text-sm text-stone-100 outline-none transition duration-300 placeholder:text-stone-500 focus:border-white/30 focus:bg-white/[0.05];
   }
+
+  /**
+   * Brand home tiles — long, soft deceleration (editorial / luxury motion).
+   * Pair with duration-[1300ms]–duration-[1700ms] and staged delays on hover.
+   */
+  .ease-brand-editorial {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.32, 1);
+  }
+
+  /**
+   * Photo + centre mark must share one clock — same duration, easing, and no stagger,
+   * otherwise zoom and logo drift feel disconnected.
+   */
+  .brand-tile-hero-motion {
+    transition-property: transform, opacity;
+    transition-duration: 1500ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.32, 1);
+    transition-delay: 0ms;
+  }
 }
 
 .grain {
@@ -109,15 +136,19 @@ textarea {
 }
 
 .animate-rise {
-  animation: rise-in 880ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: rise-in var(--motion-rise-duration) var(--motion-ease) both;
 }
 
 .animate-veil {
-  animation: veil-in 1s ease both;
+  animation: veil-in var(--motion-veil-duration) var(--motion-ease) both;
+}
+
+.animate-rise-delay-sm {
+  animation-delay: 120ms;
 }
 
 .hero-drift {
-  animation: hero-drift 14s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: hero-drift 14s var(--motion-ease) both;
 }
 
 [data-reveal],
@@ -126,9 +157,9 @@ textarea {
   opacity: 0;
   transform: translateY(44px);
   transition:
-    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
-    filter 900ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity var(--motion-reveal-duration) var(--motion-ease),
+    transform var(--motion-reveal-duration) var(--motion-ease),
+    filter var(--motion-reveal-duration) var(--motion-ease);
   will-change: opacity, transform, filter;
 }
 
@@ -140,9 +171,9 @@ textarea {
   clip-path: inset(10% 0 10% 0);
   transform: translateY(52px) scale(0.985);
   transition:
-    clip-path 1100ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+    clip-path var(--motion-reveal-image-duration) var(--motion-ease),
+    opacity var(--motion-reveal-duration) var(--motion-ease),
+    transform var(--motion-reveal-image-duration) var(--motion-ease);
 }
 
 [data-reveal].is-visible,
@@ -180,6 +211,7 @@ textarea {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;

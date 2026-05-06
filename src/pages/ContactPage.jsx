@@ -15,18 +15,20 @@ function ContactPage() {
         <PageHeader />
 
         <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-32 sm:px-8 lg:px-12 lg:pt-36">
-          <p className="eyebrow">Group contact</p>
-          <h1 className="font-display mt-5 max-w-4xl text-5xl leading-none text-white sm:text-6xl lg:text-7xl">
-            Brand enquiries for The Automotive Group.
-          </h1>
-          <p className="mt-7 max-w-2xl text-base leading-8 text-stone-300 sm:text-lg">
-            {groupOverview.statement} {groupOverview.detail}
-          </p>
+          <div className="animate-rise">
+            <p className="eyebrow">Group contact</p>
+            <h1 className="font-display mt-5 max-w-4xl text-5xl leading-none text-white sm:text-6xl lg:text-7xl">
+              Brand enquiries for The Automotive Advisory Group.
+            </h1>
+            <p className="mt-7 max-w-2xl text-base leading-8 text-stone-300 sm:text-lg">
+              {groupOverview.statement} {groupOverview.detail}
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-20 sm:px-8 lg:px-12">
-        <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
+        <div className="animate-rise-delay-sm animate-rise grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
           <div className="glass-panel p-8 sm:p-10">
             <p className="eyebrow">Brands</p>
             <div className="mt-6 grid gap-3">

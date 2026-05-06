@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { contactSettings } from "../content/siteContent";
 
-function InquiryForm({ brandName = "The Automotive Group" }) {
+function InquiryForm({ brandName = "The Automotive Advisory Group" }) {
   const [status, setStatus] = useState("idle");
 
   function handleSubmit(event) {

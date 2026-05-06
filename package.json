@@ -1,13 +1,17 @@
 {
-  "name": "luxury-automative-site",
+  "name": "luxury-automotive-site",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "optimize-images": "node scripts/optimize-images.mjs"
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "derive-classic-driver-home-logo": "node scripts/derive-classic-driver-home-logo.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.2.11",

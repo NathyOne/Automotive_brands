@@ -2,6 +2,7 @@ import classicDriverHero from "../assets/optimized/classic-driver-hero.webp";
 import classicDriverCollectingPurpose from "../assets/optimized/classic-driver-collecting-purpose.webp";
 import classicDriverExperiencePerspective from "../assets/optimized/classic-driver-experience-perspective.webp";
 import classicDriverLogoCard from "../assets/optimized/classic-driver-logo.webp";
+import classicDriverLogoHome from "../assets/optimized/classic-driver-logo-home.webp";
 import classicDriverLogoGreen from "../assets/optimized/classic-driver-logo-green.webp";
 import classicDriverMoreThanOwnership from "../assets/optimized/classic-driver-more-than-ownership.webp";
 import classicDriverProductHero from "../assets/optimized/classic-driver-product-hero.webp";
@@ -85,8 +86,8 @@ export const contactSettings = {
 };
 
 export const groupOverview = {
-  name: "The Automotive Group",
-  statement: "Brand information and enquiries for The Automotive Group.",
+  name: "The Automotive Advisory Group",
+  statement: "Brand information and enquiries for The Automotive Advisory Group.",
   detail: "Product pages for Zeigler Bailey and Encor are now available.",
 };
 
@@ -281,8 +282,7 @@ export const brands = [
         image: encorProductHero,
         alt: "Encor Series 1 front view",
         objectPosition: "50% 50%",
-        mobileFit: "contain",
-        mobileObjectPosition: "50% 34%",
+        mobileObjectPosition: "50% 36%",
       },
       logoClassName:
         "w-[min(68%,13rem)] [filter:brightness(0)_invert(1)] sm:w-[min(48%,17rem)]",
@@ -385,8 +385,9 @@ export const brands = [
     mark: {
       type: "image",
       src: classicDriverLogoCard,
+      homeSrc: classicDriverLogoHome,
       alt: "Classic Driver logo",
-      homeClassName: "w-[min(78%,18rem)] mix-blend-screen sm:w-[min(72%,22rem)]",
+      homeClassName: "w-[min(78%,18rem)] sm:w-[min(72%,22rem)]",
       pageClassName: "w-[min(78%,19rem)] mix-blend-screen sm:w-[min(70%,23rem)]",
       compactClassName: "w-28 mix-blend-screen",
     },
@@ -647,6 +648,8 @@ export const brands = [
       image: taagMarketEntryOne,
       alt: "TAAG premium automotive market entry image",
     },
+    hoverDescription:
+      "Representing the World’s Most Ambitious Automotive Brands",
     hero: {
       image: taagMarketEntryOne,
       alt: "TAAG premium automotive hero image",
@@ -670,7 +673,7 @@ export const brands = [
       {
         type: "quote",
         eyebrow: "TAAG",
-        title: "Coming soon.",
+        title: "Representing the World’s Most Ambitious Automotive Brands",
         copy: "Product information will be added here.",
         className: "min-h-[16rem] lg:min-h-[20rem]",
       },
@@ -715,24 +718,9 @@ export const brands = [
         {
           eyebrow: "Market entry strategy",
           title: "A clear pathway into Australia and New Zealand.",
-          mediaLayout: "feature",
-          media: [
-            {
-              src: taagMarketEntryTwo,
-              alt: "TAAG Australia and New Zealand market entry visualization",
-              objectPosition: "50% 50%",
-            },
-            {
-              src: taagMarketEntryOne,
-              alt: "TAAG vehicle overlooking Sydney Harbour",
-              objectPosition: "54% 50%",
-            },
-            {
-              src: taagMarketEntryThree,
-              alt: "TAAG market entry vehicle studio image",
-              objectPosition: "50% 58%",
-            },
-          ],
+          image: taagMarketEntryTwo,
+          alt: "TAAG Australia and New Zealand market entry visualization",
+          objectPosition: "50% 50%",
           copy: [
             "Defining the pathway to Australia and New Zealand requires more than route-to-market planning. It demands a clear understanding of where the brand should sit within the market and how it can succeed long term.",
             "TAAG advises on commercial model, distribution architecture, pricing position, competitor landscape, customer profile, demand signals, launch readiness and long-term viability.",
@@ -816,7 +804,7 @@ export const brands = [
               objectPosition: "50% 42%",
               copy: [
                 "Andrew Kerr is Director and Co-Founder of The Automotive Advisory Group, with more than 15 years of experience with Porsche across senior sales and management roles. During this time, he developed a deep understanding of premium customer engagement, dealer network performance and the commercial dynamics required to successfully represent high-value automotive brands.",
-                "He later established Sullivan Kerr & Kerr Collection, building a highly regarded presence in the luxury and performance segment with a focus on rare and collectible marques, and working in close alignment with globally recognised brands such as Koenigsegg and Gunther Werks. Andrew's experience combines OEM discipline with entrepreneurial execution, underpinned by a strong network and a practical understanding of how to position and grow premium automotive brands within the Oceania region.",
+                "He later established Sullivan Kerr & Kerr Collection, building a highly regarded presence in the luxury and performance segment with a focus on rare and collectible marques, and working in close alignment with globally recognised brands such as Koenigsegg and Gunther Werks. Andrew’s strength lies in translating brand intent into real-world customer relationships, ensuring that every interaction reflects the standards, nuance, and expectations of the marques he represents.",
               ],
             },
           ],
@@ -853,6 +841,25 @@ export const brands = [
     },
   },
 ];
+
+/** Slugs in home layout order (desktop row-major; mobile stack uses the same sequence). */
+export const homePageBrandSlugs = [
+  "zeigler-bailey",
+  "encor",
+  "classic-driver",
+  "the-automotive-advisory-group",
+  "kerr-collection",
+];
+
+export function getBrandsForHome() {
+  return homePageBrandSlugs.map((slug) => {
+    const brand = brands.find((b) => b.slug === slug);
+    if (!brand) {
+      throw new Error(`homePageBrandSlugs references unknown slug: ${slug}`);
+    }
+    return brand;
+  });
+}
 
 export function getBrandBySlug(slug) {
   return brands.find((brand) => brand.slug === slug);

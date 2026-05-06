@@ -68,31 +68,23 @@ function ProductHero({ brand }) {
     product.theme?.heroOverlay ??
     "linear-gradient(180deg,rgba(0,0,0,0.56),rgba(0,0,0,0.1)_42%,rgba(0,0,0,0.82))";
   const logoSrc = product.logo ?? brand.mark.src;
+  const desktopPos = product.hero.objectPosition ?? "center";
+  const mobilePos =
+    product.hero.mobileObjectPosition ?? desktopPos;
 
   return (
     <section
       className="relative isolate min-h-[92svh] overflow-hidden"
-      style={{ backgroundColor: "var(--product-dark)" }}
+      style={{
+        backgroundColor: "var(--product-dark)",
+        "--hero-img-pos-mobile": mobilePos,
+        "--hero-img-pos-desktop": desktopPos,
+      }}
     >
       <img
         src={product.hero.image}
         alt={product.hero.alt}
-        className="hero-drift absolute inset-0 hidden h-full w-full object-cover sm:block"
-        style={{ objectPosition: product.hero.objectPosition ?? "center" }}
-      />
-      <img
-        src={product.hero.image}
-        alt=""
-        className={`hero-drift absolute inset-0 h-full w-full sm:hidden ${
-          product.hero.mobileFit === "contain" ? "object-contain" : "object-cover"
-        }`}
-        style={{
-          objectPosition:
-            product.hero.mobileObjectPosition ??
-            product.hero.objectPosition ??
-            "center",
-        }}
-        aria-hidden="true"
+        className="hero-drift absolute inset-0 z-0 h-full w-full object-cover max-sm:[object-position:var(--hero-img-pos-mobile)] sm:[object-position:var(--hero-img-pos-desktop)]"
       />
       <div className="absolute inset-0" style={{ background: heroOverlay }} />
       <div className="absolute inset-0 opacity-45">
@@ -102,8 +94,8 @@ function ProductHero({ brand }) {
       <PageHeader />
 
       <div className="relative mx-auto flex min-h-[92svh] max-w-7xl items-end px-6 pb-12 pt-36 sm:px-8 lg:px-12 lg:pb-16">
-        <div className="animate-rise w-full text-center">
-          <div className="mx-auto flex justify-center">
+        <div className="w-full text-center">
+          <div className="animate-rise mx-auto flex justify-center">
             {product.logoClassName && brand.mark.type === "image" ? (
               <img
                 src={logoSrc}
@@ -114,14 +106,16 @@ function ProductHero({ brand }) {
               <BrandMark brand={brand} context="page" />
             )}
           </div>
-          <h1 className="mt-7 text-sm font-bold uppercase tracking-[0.56em] text-white sm:text-base">
-            {product.headline}
-          </h1>
-          {product.subheadline ? (
-            <p className="mt-4 text-xs font-semibold uppercase tracking-[0.32em] text-stone-200/80">
-              {product.subheadline}
-            </p>
-          ) : null}
+          <div className="animate-rise-delay-sm animate-rise mt-7">
+            <h1 className="text-sm font-bold uppercase tracking-[0.56em] text-white sm:text-base">
+              {product.headline}
+            </h1>
+            {product.subheadline ? (
+              <p className="mt-4 text-xs font-semibold uppercase tracking-[0.32em] text-stone-200/80">
+                {product.subheadline}
+              </p>
+            ) : null}
+          </div>
         </div>
       </div>
     </section>

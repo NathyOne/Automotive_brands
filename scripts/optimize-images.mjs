@@ -230,7 +230,7 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/new_pics/jESKO3.JPG",
+    input: "pics/kerr/Koenigsegg1.jpg",
     output: "kerr-koenigsegg-jesko-three.webp",
     width: 1800,
     quality: 82,
@@ -393,6 +393,7 @@ const tasks = [
     width: 900,
     quality: 92,
   },
+  // classic-driver-logo-home.webp: transparent knock-out; run `npm run derive-classic-driver-home-logo`
   {
     input: "pics/cd/26BEBEFC-D5B3-4F46-BE47-038921DD014A.png",
     output: "classic-driver-logo-green.webp",
@@ -438,22 +439,16 @@ const tasks = [
     quality: 82,
   },
   {
-    input: "pics/taag_new/IMG_1250.jpeg",
+    input: "pics/zeiglerBailey/Eleven.JPG",
     output: "taag-wide-display.webp",
     width: 1800,
     quality: 84,
   },
   {
-    input: "pics/taag_new/taag_visual_clean (1).png",
+    input: "pics/encor/Encor HERO.jpg",
     output: "taag-grey-wall-car.webp",
     width: 1800,
     quality: 84,
-    extract: {
-      left: 0,
-      top: 768,
-      width: 1076,
-      height: 256,
-    },
   },
   {
     input: "pics/taag_new/Tesla Electric Sydney.jpeg",

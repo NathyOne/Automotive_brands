@@ -42,9 +42,10 @@ function PageHeader() {
 
           <Link
             to="/contact"
-            className="hidden rounded-full border border-white/20 bg-white/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.34em] text-white transition duration-300 hover:border-white/40 hover:bg-white/18 sm:inline-flex"
+            className="inline-flex shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 px-3.5 py-2.5 text-[0.58rem] font-semibold uppercase tracking-[0.28em] text-white transition duration-300 hover:border-white/40 hover:bg-white/18 sm:px-5 sm:py-3 sm:text-xs sm:tracking-[0.34em]"
           >
-            Group Enquiries
+            <span className="sm:hidden">Enquiries</span>
+            <span className="hidden sm:inline">Group Enquiries</span>
           </Link>
         </div>
 

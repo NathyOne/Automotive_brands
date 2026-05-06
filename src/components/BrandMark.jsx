@@ -23,9 +23,14 @@ function BrandMark({ brand, context = "home" }) {
     return <TextMark label={brand.mark.label} className={className} />;
   }
 
+  const src =
+    context === "home" && brand.mark.homeSrc
+      ? brand.mark.homeSrc
+      : brand.mark.src;
+
   return (
     <img
-      src={brand.mark.src}
+      src={src}
       alt={brand.mark.alt}
       className={`object-contain ${className}`}
     />

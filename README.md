@@ -30,4 +30,3 @@ npm run optimize-images
 - `/brands/zeigler-bailey`
 - `/brands/encor`
 - `/contact`
-# Automotive_brands
