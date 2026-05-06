@@ -98,7 +98,7 @@ export const brands = [
     category: "Top left tile",
     intro: "Zeigler Bailey Z/B 4.4.",
     hoverDescription:
-      "A customer-tailored recommissioning service for 1974-'89 Porsche 911 G-series models, built around a unique Australian-engineered platform, engine, suspension, electronics and driver ergonomics.",
+      "A customer-tailored recommissioning service for 1976-'89 Porsche 911 G-series models, built around a unique Australian-engineered platform, engine, suspension, electronics and driver ergonomics.",
     paragraphs: ["Product information is available below."],
     highlights: ["Z/B 4.4", "Recommissioning", "Air-cooled flat six"],
     tile: {
@@ -157,7 +157,7 @@ export const brands = [
       eyebrow: "Introducing Zeigler/Bailey",
       introTitle: "The world's first 4.4-litre, air-cooled, 2-valve flat six.",
       intro: [
-        "Our philosophy is expressed in the Zeigler/Bailey Z/B 4.4, a customer-tailored recommissioning service available to owners of 1974-'89 Porsche 911 G-series models.",
+        "Our philosophy is expressed in the Zeigler/Bailey Z/B 4.4, a customer-tailored recommissioning service available to owners of 1976-'89 Porsche 911 G-series models.",
         "The Z/B 4.4 is not a restoration of an automotive icon. It's the complete re-engineering of one - with a unique, Australian designed and up-to-the-minute platform, engine, suspension, electronics and driver ergonomics. All clothed in classic Porsche cool.",
       ],
       sections: [
